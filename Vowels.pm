@@ -22,6 +22,9 @@ the length of simple text messages, as might be used for to send weather
 forecasts or short news items to alphanumeric pagers with limited message
 or screen sizes.
 
+Note that there's another module on CPAN called I<Lingua-EN-Squeeze>
+intended for the same purpose.
+
 =head1 EXAMPLE
 
     use Text::Munge::Vowels();
@@ -56,7 +59,7 @@ Robert Rothenberg <wlkngowl@unix.asb.com>
 =cut
 
 use vars qw($VERSION $LANGUAGE $MinLength $MungeRule @StopWords);
-$VERSION = "0.5.0";
+$VERSION = "0.5.1";
 $LANGUAGE = "en-US";		# language code (for rules and stop words)
 
 @ISA = qw(Exporter);

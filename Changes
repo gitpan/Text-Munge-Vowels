@@ -1,5 +1,8 @@
 Revision history for Perl extension Text::Munge::Vowels.
 
-0.5.0  Thu Jul 22 19:37:55 1999
-        - first truly public release
+0.5.1 Sun Sep 5 18:51:34 1999
+	- updated README
+
+0.5.0 Thu Jul 22 19:37:55 1999
+	- first truly public release
 

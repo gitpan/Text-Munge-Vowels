@@ -1,0 +1,53 @@
+NAME
+
+    Text::Munge::Vowels - removes vowels from words phrases
+
+SYNOPSIS
+        use Text::Munge::Vowels;
+
+        $obj = new Text::Munge::Vowels();
+        $obj->add_stopwords LIST
+
+        $string = $obj->munge LIST
+
+DESCRIPTION
+
+    Text::Munge::Vowels strips vowels spaces from words and phrases
+    to shorten the length of simple text messages, as might be used
+    for to send weather forecasts or short news items to
+    alphanumeric pagers with limited message or screen sizes.
+
+    Note that there's another module on CPAN called Lingua-EN-Squeeze
+    intended for the same purpose.
+
+EXAMPLE
+
+        use Text::Munge::Vowels();
+
+        $munger = new Text::Munge::Vowels();
+
+        $text = "This sentence will have some of it\'s vowels removed.";
+
+        print $munger->munge($text), "\n";
+
+CAVEATS
+
+    Overuse can make messages unreadable. "Decoding" the output of
+    this module requires a human (?) brain familiar with the
+    language and the context of the messages.
+
+    Some would argue the use of this module is suspect.
+
+FUTURE ENHANCEMENTS
+
+    Improve the regular expression in *$DefaultMungeRule* to ignore
+    double or triple vowels in short words.
+
+    Actually, I am working on a separate module which will load
+    specialized vocabularies from XML files. If this module evolves
+    at all, it will be as a wrapper to that module.
+
+AUTHOR
+
+    Robert Rothenberg <wlkngowl@unix.asb.com>
+
